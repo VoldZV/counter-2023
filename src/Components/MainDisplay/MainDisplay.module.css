@@ -1,0 +1,24 @@
+.mainDisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    font-size: 3.5vw;
+    color: var(--counter-text-color);
+    transition: all 0.5s linear;
+}
+
+.settingMessage {
+    font-size: 40px;
+    text-align: center;
+}
+.currentValue {
+    font-size: 70px;
+}
+
+.error {
+    color: var(--error-color);
+    transition: all 0.5s linear;
+}

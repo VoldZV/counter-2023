@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import {useDispatch, useSelector} from "react-redux";
+import {StateType} from "./redux/store";
+import {setThemeAC} from "./redux/reducers/counterReducer";
+import {TwoDisplayCounter} from "./Components/TwoDisplayCounter";
+import {OneDisplayCounter} from "./Components/OneDisplayCounter";
 
 function App() {
+  const theme = useSelector<StateType, 'white' | 'dark'>(state => state.counter.theme)
+  const dispatch = useDispatch()
+  const toggleTheme = () => {
+    const newTheme = theme === 'white' ? 'dark' : 'white'
+    dispatch(setThemeAC(newTheme))
+  }
+
+  const AppClassName = 'App ' + theme
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={AppClassName}>
+      <button onClick={toggleTheme}>Toggle theme</button>
+      <OneDisplayCounter/>
+      <TwoDisplayCounter/>
     </div>
   );
 }

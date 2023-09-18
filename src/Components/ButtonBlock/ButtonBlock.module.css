@@ -1,0 +1,21 @@
+.buttonBlock {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    gap: 5px;
+}
+
+.buttonBlock button {
+    border-radius: 5px;
+    flex-grow: 1;
+    transition: all 0.2s linear;
+}
+.buttonBlock button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+.buttonBlock button:active {
+    background-color: var(--active-btn-color-bg);
+}

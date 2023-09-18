@@ -1,0 +1,10 @@
+.wrapper {
+    display: flex;
+    width: 350px;
+    height: 200px;
+    background-color: var(--counter-bg);
+    border: 2px solid var(--counter-border-color);
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s all linear;
+}

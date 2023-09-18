@@ -1,0 +1,34 @@
+.settingDisplay {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.settingDisplay input {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.settingDisplay button {
+    border-radius: 5px;
+    height: 30px;
+    width: 80%;
+    transition: all 0.2s linear;
+}
+.settingDisplay button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+.settingDisplay button:active {
+    background-color: var(--active-btn-color-bg);
+}
+
+.error {
+    background-color: var(--error-color);
+}
